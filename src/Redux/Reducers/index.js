@@ -1,25 +1,23 @@
-
 const initialState = {
-       darkMode : false,
-       layout : false
-}
-
-function rootReducer(state=initialState,action) {
-    switch (action.type) {
-        case "Mode":
-            return{
-                darkMode: !state.darkMode,
-                layout: state.layout
-            };
-        case "Layout":
-            return {
-                layout: !state.layout,
-                darkMode: state.darkMode
-            };
-        default:
-            return state;
-    }
-
+	darkMode: false,
+	layout: false,
 };
 
-export default rootReducer;
+function RootReducer(_state = initialState, _action) {
+	switch (_action.type) {
+		case 'Mode':
+			return {
+				darkMode: !_state.darkMode,
+				layout: _state.layout,
+			};
+		case 'Layout':
+			return {
+				layout: !_state.layout,
+				darkMode: _state.darkMode,
+			};
+		default:
+			return _state;
+	}
+}
+
+export default RootReducer;
